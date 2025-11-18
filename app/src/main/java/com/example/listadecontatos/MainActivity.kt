@@ -2,10 +2,12 @@ package com.example.listadecontatos
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.listadecontatos.database.ContactDAO
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         btnAddContact.setOnClickListener {
             goToNextActivity()
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val contactList = ContactDAO(this).list()
+        contactList.forEach {
+            Log.i("info_db", "Id: ${it.id} | Nome: ${it.name} | Telefone: ${it.phone} | Email: ${it.email}")
         }
     }
 }
