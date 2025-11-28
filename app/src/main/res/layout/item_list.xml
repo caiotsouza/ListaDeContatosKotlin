@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintTop_toTopOf="@+id/btn_Edit" />
 
     <TextView
         android:id="@+id/Contact_Email"
@@ -35,27 +35,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Telefone"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/Contact_Email" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_Edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:cropToPadding="false"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_editar_24" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btn_Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
